@@ -1,0 +1,164 @@
+SELECT Expression:
+
+SELECT column1, column2, ...
+FROM table_name;
+WHERE condition;
+ORDER BY column1, column2, ... ASC|DESC;
+
+CONDITIONALS:
+AND, OR, NOT, IS NOT NULL, IS NULL
+
+INSERT:
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+UPDATE:
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+DELETE (same as select )
+
+DELETE FROM table_name WHERE condition;
+
+DROP (for dropping whole tables)
+DROP TABLE table_name;
+
+Aggregate Functions
+MIN() - returns the smallest value of a column
+MAX() - returns the largest value of a column
+COUNT() - returns the number of rows in a set
+SUM() - returns the sum of a numerical column
+AVG() - returns the average value of a numerical column
+
+LIKE Operator:
+The LIKE operator is used in a WHERE clause to search for a specified pattern within a column's text data.
+
+There are two wildcards often used in conjunction with the LIKE operator:
+
+A percent sign % - represents zero, one, or multiple characters
+A underscore sign _ - represents a single character
+
+BETWEEN:
+The SQL BETWEEN Operator
+The BETWEEN operator is used in the WHERE clause to select values within a specified range.
+
+The SQL JOIN Clause
+JOIN: Returns only rows that have matching values in both tables
+LEFT  JOIN: Returns all rows from the left table, and only the matched rows from the right table
+RIGHT JOIN: Returns all rows from the right table, and only the matched rows from the left table
+FULL  JOIN: Returns all rows when there is a match in either the left or right table
+
+The SQL UNION Operator
+The UNION operator is used to combine the result-set of two or more SELECT statements.
+
+The SQL GROUP BY Statement?
+
+The SQL HAVING Clause?
+
+The SQL EXISTS Operator
+The EXISTS operator is used in a WHERE clause to check whether a subquery returns any rows.
+
+The SQL ANY Operator
+The ANY operator is used to compare a value to every value returned by a subquery.
+
+The ANY operator evaluates to TRUE if at least one value in the subquery result-set meet the condition.
+
+The SQL ALL Operator
+
+The ALL operator is used to compare a value to every value returned by a subquery.
+
+The ALL operator evaluates to TRUE if every value in the subquery result-set meet the condition.
+
+The ALL operator is typically used with WHERE and HAVING statements.
+
+CASE Expression:
+
+CASE
+  WHEN condition1 THEN result1
+  WHEN condition2 THEN result2
+  WHEN conditionN THEN resultN
+  ELSE default_result
+END;
+
+PRODEDURES Expression:
+
+CREATE PROCEDURE procedure_name
+  @param1 datatype,
+  @param2 datatype
+AS
+BEGIN
+  -- SQL_statements to be executed
+  SELECT column1, column2
+  FROM table_name
+  WHERE columnN = @paramN;
+END;
+
+DATABASE Expression:
+
+CREATE DATABASE database_name;
+USE database_name;
+DROP DATABASE databasename;
+
+CREATE TABLE Statement
+
+CREATE TABLE table_name (
+  column1 datatype constraint,
+  column2 datatype constraint,
+  column3 datatype constraint,
+  ....
+);
+DROP TABLE IF EXISTS table_name;
+
+SQL Constraints
+NOT NULL - Ensures that a column cannot have a NULL value
+UNIQUE - Ensures that all values in a column are unique
+PRIMARY KEY - Uniquely identifies each row in a table (a combination of a NOT NULL and UNIQUE)
+FOREIGN KEY - Establishes a link between data in two tables, and prevents action that will destroy the link between them
+CHECK - Ensures that the values in a column satisfies a specific condition
+DEFAULT - Sets a default value for a column if no value is specified
+CREATE INDEX - Creates indexes on columns to retrieve data from the database faster
+AUTO_INCREMENT
+
+ALTER TABLE Statement:
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+
+ALTER TABLE Customers
+RENAME TO Clients;
+
+SQL Date Data Types
+
+MySQL has the following date data types:
+
+DATE - format YYYY-MM-DD
+DATETIME - format: YYYY-MM-DD HH:MI:SS
+TIMESTAMP - format: YYYY-MM-DD HH:MI:SS
+TIME - format: HH:MI:SS
+YEAR - format YYYY or YY
+
+SELECT * FROM Orders WHERE OrderDate='date '
+SELECT * FROM Orders WHERE DATATYPE(OrderDate)='datatype'
+
+CREATE VIEW Statement
+
+CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+
+
+
+
+
+
+
